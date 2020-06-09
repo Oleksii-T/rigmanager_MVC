@@ -25,6 +25,7 @@ What I missing:
 - Security.
 - Proper uploaded file system.
 - Enhanced code structure and architecture.
+- Cross browsing.
 
 In order to run application,
 you need to firstly reset dependencies:
