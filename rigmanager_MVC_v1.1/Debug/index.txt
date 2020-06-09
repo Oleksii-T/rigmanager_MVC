@@ -1,0 +1,970 @@
+PHP logo
+PHP Version 7.2.29
+
+System	Darwin Oleksiis-MacBook-Pro.local 18.7.0 Darwin Kernel Version 18.7.0: Tue Aug 20 16:57:14 PDT 2019; root:xnu-4903.271.2~2/RELEASE_X86_64 x86_64
+Build Date	Apr 2 2020 20:41:08
+Configure Command	'./configure' '--prefix=/Applications/XAMPP/xamppfiles' '--with-apxs2=/Applications/XAMPP/xamppfiles/bin/apxs' '--with-config-file-path=/Applications/XAMPP/xamppfiles/etc' '--with-mysql=mysqlnd' '--enable-inline-optimization' '--disable-debug' '--enable-bcmath' '--enable-calendar' '--enable-ctype' '--enable-ftp' '--enable-gd-native-ttf' '--enable-magic-quotes' '--enable-shmop' '--disable-sigchild' '--enable-sysvsem' '--enable-sysvshm' '--enable-wddx' '--with-gdbm=/Applications/XAMPP/xamppfiles' '--with-jpeg-dir=/Applications/XAMPP/xamppfiles' '--with-png-dir=/Applications/XAMPP/xamppfiles' '--with-freetype-dir=/Applications/XAMPP/xamppfiles' '--with-zlib=yes' '--with-zlib-dir=/Applications/XAMPP/xamppfiles' '--with-openssl=/Applications/XAMPP/xamppfiles' '--with-xsl=/Applications/XAMPP/xamppfiles' '--with-ldap=/Applications/XAMPP/xamppfiles' '--with-gd' '--with-imap=/bitnami/xamppunixinstaller72stack-osx-x64/src/imap-2007e' '--with-imap-ssl' '--with-gettext=/Applications/XAMPP/xamppfiles' '--with-mssql=shared,/Applications/XAMPP/xamppfiles' '--with-pdo-dblib=shared,/Applications/XAMPP/xamppfiles' '--with-sybase-ct=/Applications/XAMPP/xamppfiles' '--with-mysql-sock=/Applications/XAMPP/xamppfiles/var/mysql/mysql.sock' '--with-mcrypt=/Applications/XAMPP/xamppfiles' '--with-mhash=/Applications/XAMPP/xamppfiles' '--enable-sockets' '--enable-mbstring=all' '--with-curl=/Applications/XAMPP/xamppfiles' '--enable-mbregex' '--enable-zend-multibyte' '--enable-exif' '--with-bz2=/Applications/XAMPP/xamppfiles' '--with-sqlite=shared,/Applications/XAMPP/xamppfiles' '--with-sqlite3=/Applications/XAMPP/xamppfiles' '--with-libxml-dir=/Applications/XAMPP/xamppfiles' '--enable-soap' '--with-xmlrpc' '--enable-pcntl' '--with-mysqli=mysqlnd' '--with-pgsql=shared,/Applications/XAMPP/xamppfiles/' '--with-iconv=/usr' '--with-pdo-mysql=mysqlnd' '--with-pdo-pgsql=/Applications/XAMPP/xamppfiles/postgresql' '--with-pdo_sqlite=/Applications/XAMPP/xamppfiles' '--with-icu-dir=/Applications/XAMPP/xamppfiles' '--enable-fileinfo' '--enable-phar' '--enable-zip' '--enable-mbstring' 'ac_cv_decimal_fp_supported=no' '--with-libzip' '--disable-huge-code-pages' 'CFLAGS=-std=gnu99 -Qunused-arguments -UROCKSDB_SUPPORT_THREAD_LOCAL -U__MACH__ -I/Applications/XAMPP/xamppfiles/include/c-client -Qunused-arguments -I/Applications/XAMPP/xamppfiles/include/libpng -I/Applications/XAMPP/xamppfiles/include/freetype2 -O3 -L/Applications/XAMPP/xamppfiles/lib -I/Applications/XAMPP/xamppfiles/include -I/Applications/XAMPP/xamppfiles/include/ncurses -arch x86_64'
+Server API	Apache 2.0 Handler
+Virtual Directory Support	disabled
+Configuration File (php.ini) Path	/Applications/XAMPP/xamppfiles/etc
+Loaded Configuration File	/Applications/XAMPP/xamppfiles/etc/php.ini
+Scan this dir for additional .ini files	(none)
+Additional .ini files parsed	(none)
+PHP API	20170718
+PHP Extension	20170718
+Zend Extension	320170718
+Zend Extension Build	API320170718,NTS
+PHP Extension Build	API20170718,NTS
+Debug Build	no
+Thread Safety	disabled
+Zend Signal Handling	enabled
+Zend Memory Manager	enabled
+Zend Multibyte Support	provided by mbstring
+IPv6 Support	enabled
+DTrace Support	disabled
+Registered PHP Streams	https, ftps, compress.zlib, compress.bzip2, php, file, glob, data, http, ftp, phar, zip
+Registered Stream Socket Transports	tcp, udp, unix, udg, ssl, tls, tlsv1.0, tlsv1.1, tlsv1.2
+Registered Stream Filters	zlib.*, bzip2.*, convert.iconv.*, string.rot13, string.toupper, string.tolower, string.strip_tags, convert.*, consumed, dechunk, chunk
+Zend logo This program makes use of the Zend Scripting Language Engine:
+Zend Engine v3.2.0, Copyright (c) 1998-2018 Zend Technologies
+Configuration
+
+apache2handler
+
+Apache Version	Apache/2.4.43 (Unix) OpenSSL/1.1.1f PHP/7.2.29 mod_perl/2.0.8-dev Perl/v5.16.3
+Apache API Version	20120211
+Server Administrator	you@example.com
+Hostname:Port	localhost:0
+User/Group	daemon(1)/1
+Max Requests	Per Child: 0 - Keep Alive: on - Max Per Connection: 100
+Timeouts	Connection: 300 - Keep-Alive: 5
+Virtual Server	No
+Server Root	/Applications/XAMPP/xamppfiles
+Loaded Modules	core mod_so http_core prefork mod_authn_file mod_authn_dbm mod_authn_anon mod_authn_dbd mod_authn_socache mod_authn_core mod_authz_host mod_authz_groupfile mod_authz_user mod_authz_dbm mod_authz_owner mod_authz_dbd mod_authz_core mod_authnz_ldap mod_access_compat mod_auth_basic mod_auth_form mod_auth_digest mod_allowmethods mod_file_cache mod_cache mod_cache_disk mod_socache_shmcb mod_socache_dbm mod_socache_memcache mod_dbd mod_bucketeer mod_dumpio mod_echo mod_case_filter mod_case_filter_in mod_buffer mod_ratelimit mod_reqtimeout mod_ext_filter mod_request mod_include mod_filter mod_substitute mod_sed mod_charset_lite mod_deflate mod_mime util_ldap mod_log_config mod_log_debug mod_logio mod_env mod_mime_magic mod_cern_meta mod_expires mod_headers mod_usertrack mod_unique_id mod_setenvif mod_version mod_remoteip mod_proxy mod_proxy_connect mod_proxy_ftp mod_proxy_http mod_proxy_fcgi mod_proxy_scgi mod_proxy_ajp mod_proxy_balancer mod_proxy_express mod_session mod_session_cookie mod_session_dbd mod_slotmem_shm mod_ssl mod_lbmethod_byrequests mod_lbmethod_bytraffic mod_lbmethod_bybusyness mod_lbmethod_heartbeat mod_unixd mod_dav mod_status mod_autoindex mod_info mod_suexec mod_cgi mod_cgid mod_dav_fs mod_vhost_alias mod_negotiation mod_dir mod_actions mod_speling mod_userdir mod_alias mod_rewrite mod_php7 mod_perl
+Directive	Local Value	Master Value
+engine	1	1
+last_modified	0	0
+xbithack	0	0
+Apache Environment
+
+Variable	Value
+UNIQUE_ID	Xq7MeKj6H5QiCcKoWLzrLAAAAAE
+HTTP_HOST	localhost
+HTTP_COOKIE	PHPSESSID=077e03daf2d147d129d5c8c6e594dd09
+HTTP_CONNECTION	keep-alive
+HTTP_UPGRADE_INSECURE_REQUESTS	1
+HTTP_ACCEPT	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+HTTP_USER_AGENT	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.1.2 Safari/605.1.15
+HTTP_REFERER	http://localhost/
+HTTP_ACCEPT_LANGUAGE	en-us
+HTTP_ACCEPT_ENCODING	gzip, deflate
+PATH	/usr/bin:/bin:/usr/sbin:/sbin
+DYLD_LIBRARY_PATH	/Applications/XAMPP/xamppfiles/lib
+SERVER_SIGNATURE	no value
+SERVER_SOFTWARE	Apache/2.4.43 (Unix) OpenSSL/1.1.1f PHP/7.2.29 mod_perl/2.0.8-dev Perl/v5.16.3
+SERVER_NAME	localhost
+SERVER_ADDR	::1
+SERVER_PORT	80
+REMOTE_ADDR	::1
+DOCUMENT_ROOT	/Applications/XAMPP/xamppfiles/htdocs/public/
+REQUEST_SCHEME	http
+CONTEXT_PREFIX	no value
+CONTEXT_DOCUMENT_ROOT	/Applications/XAMPP/xamppfiles/htdocs/public/
+SERVER_ADMIN	you@example.com
+SCRIPT_FILENAME	/Applications/XAMPP/xamppfiles/htdocs/public/index.php
+REMOTE_PORT	58910
+GATEWAY_INTERFACE	CGI/1.1
+SERVER_PROTOCOL	HTTP/1.1
+REQUEST_METHOD	GET
+QUERY_STRING	no value
+REQUEST_URI	/
+SCRIPT_NAME	/index.php
+HTTP Headers Information
+
+HTTP Request Headers
+HTTP Request	GET / HTTP/1.1
+Host	localhost
+Cookie	PHPSESSID=077e03daf2d147d129d5c8c6e594dd09
+Connection	keep-alive
+Upgrade-Insecure-Requests	1
+Accept	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.1.2 Safari/605.1.15
+Referer	http://localhost/
+Accept-Language	en-us
+Accept-Encoding	gzip, deflate
+HTTP Response Headers
+X-Powered-By	PHP/7.2.29
+Expires	Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control	no-store, no-cache, must-revalidate
+Pragma	no-cache
+bcmath
+
+BCMath support	enabled
+Directive	Local Value	Master Value
+bcmath.scale	0	0
+bz2
+
+BZip2 Support	Enabled
+Stream Wrapper support	compress.bzip2://
+Stream Filter support	bzip2.decompress, bzip2.compress
+BZip2 Version	1.0.6, 6-Sept-2010
+calendar
+
+Calendar support	enabled
+Core
+
+PHP Version	7.2.29
+Directive	Local Value	Master Value
+allow_url_fopen	On	On
+allow_url_include	Off	Off
+arg_separator.input	&	&
+arg_separator.output	&	&
+auto_append_file	no value	no value
+auto_globals_jit	On	On
+auto_prepend_file	no value	no value
+browscap	no value	no value
+default_charset	UTF-8	UTF-8
+default_mimetype	text/html	text/html
+disable_classes	no value	no value
+disable_functions	no value	no value
+display_errors	On	On
+display_startup_errors	On	On
+doc_root	no value	no value
+docref_ext	no value	no value
+docref_root	no value	no value
+enable_dl	Off	Off
+enable_post_data_reading	On	On
+error_append_string	no value	no value
+error_log	/Applications/XAMPP/xamppfiles/logs/php_error_log	/Applications/XAMPP/xamppfiles/logs/php_error_log
+error_prepend_string	no value	no value
+error_reporting	32767	22527
+expose_php	On	On
+extension_dir	/Applications/XAMPP/xamppfiles/lib/php/extensions/no-debug-non-zts-20170718	/Applications/XAMPP/xamppfiles/lib/php/extensions/no-debug-non-zts-20170718
+file_uploads	On	On
+hard_timeout	2	2
+highlight.comment	#FF8000	#FF8000
+highlight.default	#0000BB	#0000BB
+highlight.html	#000000	#000000
+highlight.keyword	#007700	#007700
+highlight.string	#DD0000	#DD0000
+html_errors	On	On
+ignore_repeated_errors	Off	Off
+ignore_repeated_source	Off	Off
+ignore_user_abort	Off	Off
+implicit_flush	Off	Off
+include_path	.:/Applications/XAMPP/xamppfiles/lib/php	.:/Applications/XAMPP/xamppfiles/lib/php
+input_encoding	no value	no value
+internal_encoding	no value	no value
+log_errors	On	On
+log_errors_max_len	1024	1024
+mail.add_x_header	On	On
+mail.force_extra_parameters	no value	no value
+mail.log	no value	no value
+max_execution_time	120	120
+max_file_uploads	20	20
+max_input_nesting_level	64	64
+max_input_time	60	60
+max_input_vars	1000	1000
+memory_limit	512M	512M
+open_basedir	no value	no value
+output_buffering	4096	4096
+output_encoding	no value	no value
+output_handler	no value	no value
+post_max_size	40M	40M
+precision	14	14
+realpath_cache_size	4096K	4096K
+realpath_cache_ttl	120	120
+register_argc_argv	Off	Off
+report_memleaks	On	On
+report_zend_debug	On	On
+request_order	GP	GP
+sendmail_from	no value	no value
+sendmail_path	/usr/sbin/sendmail -t -i 	/usr/sbin/sendmail -t -i 
+serialize_precision	100	100
+short_open_tag	On	On
+SMTP	localhost	localhost
+smtp_port	25	25
+sys_temp_dir	no value	no value
+track_errors	On	On
+unserialize_callback_func	no value	no value
+upload_max_filesize	40M	40M
+upload_tmp_dir	/Applications/XAMPP/xamppfiles/temp/	/Applications/XAMPP/xamppfiles/temp/
+user_dir	no value	no value
+user_ini.cache_ttl	300	300
+user_ini.filename	.user.ini	.user.ini
+variables_order	GPCS	GPCS
+xmlrpc_error_number	0	0
+xmlrpc_errors	Off	Off
+zend.assertions	1	1
+zend.detect_unicode	On	On
+zend.enable_gc	On	On
+zend.multibyte	Off	Off
+zend.script_encoding	no value	no value
+zend.signal_check	Off	Off
+ctype
+
+ctype functions	enabled
+curl
+
+cURL support	enabled
+cURL Information	7.53.1
+Age	3
+Features
+AsynchDNS	No
+CharConv	No
+Debug	No
+GSS-Negotiate	No
+IDN	No
+IPv6	Yes
+krb4	No
+Largefile	Yes
+libz	Yes
+NTLM	Yes
+NTLMWB	Yes
+SPNEGO	No
+SSL	Yes
+SSPI	No
+TLS-SRP	Yes
+HTTP2	No
+GSSAPI	No
+KERBEROS5	No
+UNIX_SOCKETS	Yes
+PSL	No
+Protocols	dict, file, ftp, ftps, gopher, http, https, imap, imaps, ldap, ldaps, pop3, pop3s, rtsp, smb, smbs, smtp, smtps, telnet, tftp
+Host	x86_64-apple-darwin14.5.0
+SSL Version	OpenSSL/1.1.1f
+ZLib Version	1.2.11
+date
+
+date/time support	enabled
+timelib version	2017.09
+"Olson" Timezone Database Version	2018.9
+Timezone Database	internal
+Default timezone	Europe/Berlin
+Directive	Local Value	Master Value
+date.default_latitude	31.7667	31.7667
+date.default_longitude	35.2333	35.2333
+date.sunrise_zenith	90.583333	90.583333
+date.sunset_zenith	90.583333	90.583333
+date.timezone	Europe/Berlin	Europe/Berlin
+dba
+
+DBA support	enabled
+Supported handlers	gdbm cdb cdb_make inifile flatfile
+Directive	Local Value	Master Value
+dba.default_handler	flatfile	flatfile
+dom
+
+DOM/XML	enabled
+DOM/XML API Version	20031129
+libxml Version	2.9.0
+HTML Support	enabled
+XPath Support	enabled
+XPointer Support	enabled
+Schema Support	enabled
+RelaxNG Support	enabled
+exif
+
+EXIF Support	enabled
+EXIF Version	7.2.29
+Supported EXIF Version	0220
+Supported filetypes	JPEG, TIFF
+Multibyte decoding support using mbstring	enabled
+Extended EXIF tag formats	Canon, Casio, Fujifilm, Nikon, Olympus, Samsung, Panasonic, DJI, Sony, Pentax, Minolta, Sigma, Foveon, Kyocera, Ricoh, AGFA, Epson
+Directive	Local Value	Master Value
+exif.decode_jis_intel	JIS	JIS
+exif.decode_jis_motorola	JIS	JIS
+exif.decode_unicode_intel	UCS-2LE	UCS-2LE
+exif.decode_unicode_motorola	UCS-2BE	UCS-2BE
+exif.encode_jis	no value	no value
+exif.encode_unicode	ISO-8859-15	ISO-8859-15
+fileinfo
+
+fileinfo support	enabled
+version	1.0.5
+libmagic	531
+filter
+
+Input Validation and Filtering	enabled
+Revision	$Id: 5a34caaa246b9df197f4b43af8ac66a07464fe4b $
+Directive	Local Value	Master Value
+filter.default	unsafe_raw	unsafe_raw
+filter.default_flags	no value	no value
+ftp
+
+FTP support	enabled
+FTPS support	enabled
+gd
+
+GD Support	enabled
+GD Version	bundled (2.1.0 compatible)
+FreeType Support	enabled
+FreeType Linkage	with freetype
+FreeType Version	2.4.8
+GIF Read Support	enabled
+GIF Create Support	enabled
+JPEG Support	enabled
+libJPEG Version	9 compatible
+PNG Support	enabled
+libPNG Version	1.6.37
+WBMP Support	enabled
+XBM Support	enabled
+Directive	Local Value	Master Value
+gd.jpeg_ignore_warning	1	1
+gettext
+
+GetText Support	enabled
+hash
+
+hash support	enabled
+Hashing Engines	md2 md4 md5 sha1 sha224 sha256 sha384 sha512/224 sha512/256 sha512 sha3-224 sha3-256 sha3-384 sha3-512 ripemd128 ripemd160 ripemd256 ripemd320 whirlpool tiger128,3 tiger160,3 tiger192,3 tiger128,4 tiger160,4 tiger192,4 snefru snefru256 gost gost-crypto adler32 crc32 crc32b fnv132 fnv1a32 fnv164 fnv1a64 joaat haval128,3 haval160,3 haval192,3 haval224,3 haval256,3 haval128,4 haval160,4 haval192,4 haval224,4 haval256,4 haval128,5 haval160,5 haval192,5 haval224,5 haval256,5
+MHASH support	Enabled
+MHASH API Version	Emulated Support
+iconv
+
+iconv support	enabled
+iconv implementation	libiconv
+iconv library version	1.11
+Directive	Local Value	Master Value
+iconv.input_encoding	no value	no value
+iconv.internal_encoding	no value	no value
+iconv.output_encoding	no value	no value
+imap
+
+IMAP c-Client Version	2007e
+SSL Support	enabled
+Directive	Local Value	Master Value
+imap.enable_insecure_rsh	Off	Off
+json
+
+json support	enabled
+json version	1.6.0
+ldap
+
+LDAP Support	enabled
+RCS Version	$Id: 3839f871a91c293a52322c63329c68db23a0290a $
+Total Links	0/unlimited
+API Version	3001
+Vendor Name	OpenLDAP
+Vendor Version	20448
+Directive	Local Value	Master Value
+ldap.max_links	Unlimited	Unlimited
+libxml
+
+libXML support	active
+libXML Compiled Version	2.9.0
+libXML Loaded Version	20904
+libXML streams	enabled
+mbstring
+
+Multibyte Support	enabled
+Multibyte string engine	libmbfl
+HTTP input encoding translation	disabled
+libmbfl version	1.3.2
+oniguruma version	6.3.0
+mbstring extension makes use of "streamable kanji code filter and converter", which is distributed under the GNU Lesser General Public License version 2.1.
+Multibyte (japanese) regex support	enabled
+Multibyte regex (oniguruma) backtrack check	On
+Multibyte regex (oniguruma) version	6.3.0
+Directive	Local Value	Master Value
+mbstring.detect_order	no value	no value
+mbstring.encoding_translation	Off	Off
+mbstring.func_overload	0	0
+mbstring.http_input	no value	no value
+mbstring.http_output	no value	no value
+mbstring.http_output_conv_mimetypes	^(text/|application/xhtml\+xml)	^(text/|application/xhtml\+xml)
+mbstring.internal_encoding	no value	no value
+mbstring.language	neutral	neutral
+mbstring.strict_detection	Off	Off
+mbstring.substitute_character	no value	no value
+mysqli
+
+MysqlI Support	enabled
+Client API library version	mysqlnd 5.0.12-dev - 20150407 - $Id: 3591daad22de08524295e1bd073aceeff11e6579 $
+Active Persistent Links	0
+Inactive Persistent Links	0
+Active Links	0
+Directive	Local Value	Master Value
+mysqli.allow_local_infile	Off	Off
+mysqli.allow_persistent	On	On
+mysqli.default_host	no value	no value
+mysqli.default_port	3306	3306
+mysqli.default_pw	no value	no value
+mysqli.default_socket	/Applications/XAMPP/xamppfiles/var/mysql/mysql.sock	/Applications/XAMPP/xamppfiles/var/mysql/mysql.sock
+mysqli.default_user	no value	no value
+mysqli.max_links	Unlimited	Unlimited
+mysqli.max_persistent	Unlimited	Unlimited
+mysqli.reconnect	Off	Off
+mysqli.rollback_on_cached_plink	Off	Off
+mysqlnd
+
+mysqlnd	enabled
+Version	mysqlnd 5.0.12-dev - 20150407 - $Id: 3591daad22de08524295e1bd073aceeff11e6579 $
+Compression	supported
+core SSL	supported
+extended SSL	supported
+Command buffer size	4096
+Read buffer size	32768
+Read timeout	86400
+Collecting statistics	Yes
+Collecting memory statistics	Yes
+Tracing	n/a
+Loaded plugins	mysqlnd,debug_trace,auth_plugin_mysql_native_password,auth_plugin_mysql_clear_password,auth_plugin_sha256_password
+API Extensions	mysqli,pdo_mysql
+mysqlnd statistics	
+bytes_sent	345
+bytes_received	1848
+packets_sent	10
+packets_received	30
+protocol_overhead_in	120
+protocol_overhead_out	40
+bytes_received_ok_packet	0
+bytes_received_eof_packet	0
+bytes_received_rset_header_packet	18
+bytes_received_rset_field_meta_packet	0
+bytes_received_rset_row_packet	10
+bytes_received_prepare_response_packet	1252
+bytes_received_change_user_packet	350
+packets_sent_command	3
+packets_received_ok	0
+packets_received_eof	0
+packets_received_rset_header	2
+packets_received_rset_field_meta	0
+packets_received_rset_row	2
+packets_received_prepare_response	18
+packets_received_change_user	4
+result_set_queries	2
+non_result_set_queries	0
+no_index_used	0
+bad_index_used	0
+slow_queries	0
+buffered_sets	2
+unbuffered_sets	0
+ps_buffered_sets	0
+ps_unbuffered_sets	0
+flushed_normal_sets	0
+flushed_ps_sets	0
+ps_prepared_never_executed	0
+ps_prepared_once_executed	0
+rows_fetched_from_server_normal	2
+rows_fetched_from_server_ps	0
+rows_buffered_from_client_normal	2
+rows_buffered_from_client_ps	0
+rows_fetched_from_client_normal_buffered	2
+rows_fetched_from_client_normal_unbuffered	0
+rows_fetched_from_client_ps_buffered	0
+rows_fetched_from_client_ps_unbuffered	0
+rows_fetched_from_client_ps_cursor	0
+rows_affected_normal	0
+rows_affected_ps	0
+rows_skipped_normal	2
+rows_skipped_ps	0
+copy_on_write_saved	0
+copy_on_write_performed	0
+command_buffer_too_small	0
+connect_success	2
+connect_failure	0
+connection_reused	0
+reconnect	0
+pconnect_success	0
+active_connections	0
+active_persistent_connections	0
+explicit_close	1
+implicit_close	0
+disconnect_close	0
+in_middle_of_command_close	0
+explicit_free_result	2
+implicit_free_result	0
+explicit_stmt_close	0
+implicit_stmt_close	0
+mem_emalloc_count	36
+mem_emalloc_amount	41736
+mem_ecalloc_count	60
+mem_ecalloc_amount	16320
+mem_erealloc_count	0
+mem_erealloc_amount	0
+mem_efree_count	96
+mem_efree_amount	52048
+mem_malloc_count	2
+mem_malloc_amount	144
+mem_calloc_count	0
+mem_calloc_amount	0
+mem_realloc_count	0
+mem_realloc_amount	0
+mem_free_count	2
+mem_free_amount	144
+mem_estrndup_count	8
+mem_strndup_count	0
+mem_estrdup_count	12
+mem_strdup_count	0
+mem_edupl_count	0
+mem_dupl_count	0
+proto_text_fetched_null	0
+proto_text_fetched_bit	0
+proto_text_fetched_tinyint	2
+proto_text_fetched_short	0
+proto_text_fetched_int24	0
+proto_text_fetched_int	2
+proto_text_fetched_bigint	0
+proto_text_fetched_decimal	0
+proto_text_fetched_float	0
+proto_text_fetched_double	0
+proto_text_fetched_date	0
+proto_text_fetched_year	0
+proto_text_fetched_time	0
+proto_text_fetched_datetime	0
+proto_text_fetched_timestamp	0
+proto_text_fetched_string	8
+proto_text_fetched_blob	0
+proto_text_fetched_enum	0
+proto_text_fetched_set	0
+proto_text_fetched_geometry	0
+proto_text_fetched_other	0
+proto_binary_fetched_null	0
+proto_binary_fetched_bit	0
+proto_binary_fetched_tinyint	0
+proto_binary_fetched_short	0
+proto_binary_fetched_int24	0
+proto_binary_fetched_int	0
+proto_binary_fetched_bigint	0
+proto_binary_fetched_decimal	0
+proto_binary_fetched_float	0
+proto_binary_fetched_double	0
+proto_binary_fetched_date	0
+proto_binary_fetched_year	0
+proto_binary_fetched_time	0
+proto_binary_fetched_datetime	0
+proto_binary_fetched_timestamp	0
+proto_binary_fetched_string	0
+proto_binary_fetched_json	0
+proto_binary_fetched_blob	0
+proto_binary_fetched_enum	0
+proto_binary_fetched_set	0
+proto_binary_fetched_geometry	0
+proto_binary_fetched_other	0
+init_command_executed_count	0
+init_command_failed_count	0
+com_quit	1
+com_init_db	0
+com_query	2
+com_field_list	0
+com_create_db	0
+com_drop_db	0
+com_refresh	0
+com_shutdown	0
+com_statistics	0
+com_process_info	0
+com_connect	0
+com_process_kill	0
+com_debug	0
+com_ping	0
+com_time	0
+com_delayed_insert	0
+com_change_user	0
+com_binlog_dump	0
+com_table_dump	0
+com_connect_out	0
+com_register_slave	0
+com_stmt_prepare	0
+com_stmt_execute	0
+com_stmt_send_long_data	0
+com_stmt_close	0
+com_stmt_reset	0
+com_stmt_set_option	0
+com_stmt_fetch	0
+com_deamon	0
+bytes_received_real_data_normal	316
+bytes_received_real_data_ps	0
+openssl
+
+OpenSSL support	enabled
+OpenSSL Library Version	OpenSSL 1.1.1f 31 Mar 2020
+OpenSSL Header Version	OpenSSL 1.1.1f 31 Mar 2020
+Openssl default config	/Applications/XAMPP/xamppfiles/share/openssl/openssl.cnf
+Directive	Local Value	Master Value
+openssl.cafile	/Applications/XAMPP/xamppfiles/share/curl/curl-ca-bundle.crt	/Applications/XAMPP/xamppfiles/share/curl/curl-ca-bundle.crt
+openssl.capath	no value	no value
+pcre
+
+PCRE (Perl Compatible Regular Expressions) Support	enabled
+PCRE Library Version	8.41 2017-07-05
+PCRE JIT Support	enabled
+Directive	Local Value	Master Value
+pcre.backtrack_limit	1000000	1000000
+pcre.jit	1	1
+pcre.recursion_limit	100000	100000
+PDO
+
+PDO support	enabled
+PDO drivers	mysql, pgsql, sqlite
+pdo_mysql
+
+PDO Driver for MySQL	enabled
+Client API version	mysqlnd 5.0.12-dev - 20150407 - $Id: 3591daad22de08524295e1bd073aceeff11e6579 $
+Directive	Local Value	Master Value
+pdo_mysql.default_socket	/Applications/XAMPP/xamppfiles/var/mysql/mysql.sock	/Applications/XAMPP/xamppfiles/var/mysql/mysql.sock
+pdo_pgsql
+
+PDO Driver for PostgreSQL	enabled
+PostgreSQL(libpq) Version	11.7
+Module version	7.2.29
+Revision	$Id: 9c5f356c77143981d2e905e276e439501fe0f419 $
+pdo_sqlite
+
+PDO Driver for SQLite 3.x	enabled
+SQLite Library	3.31.1
+Phar
+
+Phar: PHP Archive support	enabled
+Phar EXT version	2.0.2
+Phar API version	1.1.1
+SVN revision	$Id: ba76a9b0e06d536a9b602c782e38e6826cb4ee02 $
+Phar-based phar archives	enabled
+Tar-based phar archives	enabled
+ZIP-based phar archives	enabled
+gzip compression	enabled
+bzip2 compression	enabled
+OpenSSL support	enabled
+Phar based on pear/PHP_Archive, original concept by Davey Shafik.
+Phar fully realized by Gregory Beaver and Marcus Boerger.
+Portions of tar implementation Copyright (c) 2003-2009 Tim Kientzle.
+Directive	Local Value	Master Value
+phar.cache_list	no value	no value
+phar.readonly	On	On
+phar.require_hash	On	On
+posix
+
+Revision	$Id: 0a764bab332255746424a1e6cfbaaeebab998e4c $
+Reflection
+
+Reflection	enabled
+Version	$Id: fe5f2178c6eb97631d3f8f03ceb9eddb88e664c7 $
+session
+
+Session Support	enabled
+Registered save handlers	files user
+Registered serializer handlers	php_serialize php php_binary wddx
+Directive	Local Value	Master Value
+session.auto_start	Off	Off
+session.cache_expire	180	180
+session.cache_limiter	nocache	nocache
+session.cookie_domain	no value	no value
+session.cookie_httponly	no value	no value
+session.cookie_lifetime	0	0
+session.cookie_path	/	/
+session.cookie_secure	0	0
+session.gc_divisor	1000	1000
+session.gc_maxlifetime	1440	1440
+session.gc_probability	1	1
+session.lazy_write	On	On
+session.name	PHPSESSID	PHPSESSID
+session.referer_check	no value	no value
+session.save_handler	files	files
+session.save_path	/Applications/XAMPP/xamppfiles/temp/	/Applications/XAMPP/xamppfiles/temp/
+session.serialize_handler	php	php
+session.sid_bits_per_character	4	4
+session.sid_length	32	32
+session.upload_progress.cleanup	On	On
+session.upload_progress.enabled	On	On
+session.upload_progress.freq	1%	1%
+session.upload_progress.min_freq	1	1
+session.upload_progress.name	PHP_SESSION_UPLOAD_PROGRESS	PHP_SESSION_UPLOAD_PROGRESS
+session.upload_progress.prefix	upload_progress_	upload_progress_
+session.use_cookies	1	1
+session.use_only_cookies	1	1
+session.use_strict_mode	0	0
+session.use_trans_sid	0	0
+shmop
+
+shmop support	enabled
+SimpleXML
+
+Simplexml support	enabled
+Revision	$Id: 341daed0ee94ea8f728bfd0ba4626e6ed365c0d1 $
+Schema support	enabled
+soap
+
+Soap Client	enabled
+Soap Server	enabled
+Directive	Local Value	Master Value
+soap.wsdl_cache	1	1
+soap.wsdl_cache_dir	/tmp	/tmp
+soap.wsdl_cache_enabled	1	1
+soap.wsdl_cache_limit	5	5
+soap.wsdl_cache_ttl	86400	86400
+sockets
+
+Sockets Support	enabled
+SPL
+
+SPL support	enabled
+Interfaces	OuterIterator, RecursiveIterator, SeekableIterator, SplObserver, SplSubject
+Classes	AppendIterator, ArrayIterator, ArrayObject, BadFunctionCallException, BadMethodCallException, CachingIterator, CallbackFilterIterator, DirectoryIterator, DomainException, EmptyIterator, FilesystemIterator, FilterIterator, GlobIterator, InfiniteIterator, InvalidArgumentException, IteratorIterator, LengthException, LimitIterator, LogicException, MultipleIterator, NoRewindIterator, OutOfBoundsException, OutOfRangeException, OverflowException, ParentIterator, RangeException, RecursiveArrayIterator, RecursiveCachingIterator, RecursiveCallbackFilterIterator, RecursiveDirectoryIterator, RecursiveFilterIterator, RecursiveIteratorIterator, RecursiveRegexIterator, RecursiveTreeIterator, RegexIterator, RuntimeException, SplDoublyLinkedList, SplFileInfo, SplFileObject, SplFixedArray, SplHeap, SplMinHeap, SplMaxHeap, SplObjectStorage, SplPriorityQueue, SplQueue, SplStack, SplTempFileObject, UnderflowException, UnexpectedValueException
+sqlite3
+
+SQLite3 support	enabled
+SQLite3 module version	7.2.29
+SQLite Library	3.31.1
+Directive	Local Value	Master Value
+sqlite3.defensive	1	1
+sqlite3.extension_dir	no value	no value
+standard
+
+Dynamic Library Support	enabled
+Path to sendmail	/usr/sbin/sendmail -t -i
+Directive	Local Value	Master Value
+assert.active	1	1
+assert.bail	0	0
+assert.callback	no value	no value
+assert.exception	0	0
+assert.quiet_eval	0	0
+assert.warning	1	1
+auto_detect_line_endings	0	0
+default_socket_timeout	60	60
+from	no value	no value
+session.trans_sid_hosts	no value	no value
+session.trans_sid_tags	a=href,area=href,frame=src,form=	a=href,area=href,frame=src,form=
+url_rewriter.hosts	no value	no value
+url_rewriter.tags	a=href,area=href,frame=src,input=src,form=fakeentry	a=href,area=href,frame=src,input=src,form=fakeentry
+user_agent	no value	no value
+sysvsem
+
+Version	7.2.29
+sysvshm
+
+Version	7.2.29
+tokenizer
+
+Tokenizer Support	enabled
+wddx
+
+WDDX Support	enabled
+WDDX Session Serializer	enabled
+xml
+
+XML Support	active
+XML Namespace Support	active
+libxml2 Version	2.9.0
+xmlreader
+
+XMLReader	enabled
+xmlrpc
+
+core library version	xmlrpc-epi v. 0.51
+php extension version	7.2.29
+author	Dan Libby
+homepage	http://xmlrpc-epi.sourceforge.net
+open sourced by	Epinions.com
+xmlwriter
+
+XMLWriter	enabled
+xsl
+
+XSL	enabled
+libxslt Version	1.1.29
+libxslt compiled against libxml Version	2.9.4
+EXSLT	enabled
+libexslt Version	1.1.28
+zip
+
+Zip	enabled
+Zip version	1.15.4
+Libzip headers version	1.5.1
+Libzip library version	1.5.1
+zlib
+
+ZLib Support	enabled
+Stream Wrapper	compress.zlib://
+Stream Filter	zlib.inflate, zlib.deflate
+Compiled Version	1.2.11
+Linked Version	1.2.11
+Directive	Local Value	Master Value
+zlib.output_compression	Off	Off
+zlib.output_compression_level	-1	-1
+zlib.output_handler	no value	no value
+Additional Modules
+
+Module Name
+Environment
+
+Variable	Value
+SHELL	/bin/bash
+TMPDIR	/var/folders/rm/4jqzqfl11s79rgvhlrxmtyfc0000gn/T/
+Apple_PubSub_Socket_Render	/private/tmp/com.apple.launchd.g86UlvTfLW/Render
+de	false
+__AUTHORIZATION	auth 3
+USER	oleksiit
+SSH_AUTH_SOCK	/private/tmp/com.apple.launchd.ValXpfl5oO/Listeners
+_BASH_IMPLICIT_DASH_PEE	-p
+__CF_USER_TEXT_ENCODING	0x0:0:0
+GETTEXT	/Applications/XAMPP/xamppfiles/bin/gettext
+PATH	/usr/bin:/bin:/usr/sbin:/sbin
+PWD	/
+XPC_FLAGS	0x0
+XAMPP_ROOT	/Applications/XAMPP/xamppfiles
+XPC_SERVICE_NAME	0
+XAMPP_OS	Mac OS X
+HOME	/Users/oleksiit
+SHLVL	6
+DYLD_LIBRARY_PATH	/Applications/XAMPP/xamppfiles/lib
+LOGNAME	oleksiit
+TEXTDOMAIN	xampp
+_	/Applications/XAMPP/xamppfiles/bin/httpd
+PHP Variables
+
+Variable	Value
+$_COOKIE['PHPSESSID']	077e03daf2d147d129d5c8c6e594dd09
+$_SERVER['UNIQUE_ID']	Xq7MeKj6H5QiCcKoWLzrLAAAAAE
+$_SERVER['HTTP_HOST']	localhost
+$_SERVER['HTTP_COOKIE']	PHPSESSID=077e03daf2d147d129d5c8c6e594dd09
+$_SERVER['HTTP_CONNECTION']	keep-alive
+$_SERVER['HTTP_UPGRADE_INSECURE_REQUESTS']	1
+$_SERVER['HTTP_ACCEPT']	text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+$_SERVER['HTTP_USER_AGENT']	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.1.2 Safari/605.1.15
+$_SERVER['HTTP_REFERER']	http://localhost/
+$_SERVER['HTTP_ACCEPT_LANGUAGE']	en-us
+$_SERVER['HTTP_ACCEPT_ENCODING']	gzip, deflate
+$_SERVER['PATH']	/usr/bin:/bin:/usr/sbin:/sbin
+$_SERVER['DYLD_LIBRARY_PATH']	/Applications/XAMPP/xamppfiles/lib
+$_SERVER['SERVER_SIGNATURE']	no value
+$_SERVER['SERVER_SOFTWARE']	Apache/2.4.43 (Unix) OpenSSL/1.1.1f PHP/7.2.29 mod_perl/2.0.8-dev Perl/v5.16.3
+$_SERVER['SERVER_NAME']	localhost
+$_SERVER['SERVER_ADDR']	::1
+$_SERVER['SERVER_PORT']	80
+$_SERVER['REMOTE_ADDR']	::1
+$_SERVER['DOCUMENT_ROOT']	/Applications/XAMPP/xamppfiles/htdocs/public/
+$_SERVER['REQUEST_SCHEME']	http
+$_SERVER['CONTEXT_PREFIX']	no value
+$_SERVER['CONTEXT_DOCUMENT_ROOT']	/Applications/XAMPP/xamppfiles/htdocs/public/
+$_SERVER['SERVER_ADMIN']	you@example.com
+$_SERVER['SCRIPT_FILENAME']	/Applications/XAMPP/xamppfiles/htdocs/public/index.php
+$_SERVER['REMOTE_PORT']	58910
+$_SERVER['GATEWAY_INTERFACE']	CGI/1.1
+$_SERVER['SERVER_PROTOCOL']	HTTP/1.1
+$_SERVER['REQUEST_METHOD']	GET
+$_SERVER['QUERY_STRING']	no value
+$_SERVER['REQUEST_URI']	/
+$_SERVER['SCRIPT_NAME']	/index.php
+$_SERVER['PHP_SELF']	/index.php
+$_SERVER['REQUEST_TIME_FLOAT']	1588513912.767
+$_SERVER['REQUEST_TIME']	1588513912
+PHP Credits
+
+PHP Group
+Thies C. Arntzen, Stig Bakken, Shane Caraveo, Andi Gutmans, Rasmus Lerdorf, Sam Ruby, Sascha Schumann, Zeev Suraski, Jim Winstead, Andrei Zmievski
+Language Design & Concept
+Andi Gutmans, Rasmus Lerdorf, Zeev Suraski, Marcus Boerger
+PHP Authors
+Contribution	Authors
+Zend Scripting Language Engine	Andi Gutmans, Zeev Suraski, Stanislav Malyshev, Marcus Boerger, Dmitry Stogov, Xinchen Hui, Nikita Popov
+Extension Module API	Andi Gutmans, Zeev Suraski, Andrei Zmievski
+UNIX Build and Modularization	Stig Bakken, Sascha Schumann, Jani Taskinen
+Windows Support	Shane Caraveo, Zeev Suraski, Wez Furlong, Pierre-Alain Joye, Anatol Belski, Kalle Sommer Nielsen
+Server API (SAPI) Abstraction Layer	Andi Gutmans, Shane Caraveo, Zeev Suraski
+Streams Abstraction Layer	Wez Furlong, Sara Golemon
+PHP Data Objects Layer	Wez Furlong, Marcus Boerger, Sterling Hughes, George Schlossnagle, Ilia Alshanetsky
+Output Handler	Zeev Suraski, Thies C. Arntzen, Marcus Boerger, Michael Wallner
+Consistent 64 bit support	Anthony Ferrara, Anatol Belski
+SAPI Modules
+Contribution	Authors
+Apache 2.0 Handler	Ian Holsman, Justin Erenkrantz (based on Apache 2.0 Filter code)
+CGI / FastCGI	Rasmus Lerdorf, Stig Bakken, Shane Caraveo, Dmitry Stogov
+CLI	Edin Kadribasic, Marcus Boerger, Johannes Schlueter, Moriyoshi Koizumi, Xinchen Hui
+Embed	Edin Kadribasic
+FastCGI Process Manager	Andrei Nigmatulin, dreamcat4, Antony Dovgal, Jerome Loyet
+litespeed	George Wang
+phpdbg	Felipe Pena, Joe Watkins, Bob Weinand
+Module Authors
+Module	Authors
+BC Math	Andi Gutmans
+Bzip2	Sterling Hughes
+Calendar	Shane Caraveo, Colin Viebrock, Hartmut Holzgraefe, Wez Furlong
+COM and .Net	Wez Furlong
+ctype	Hartmut Holzgraefe
+cURL	Sterling Hughes
+Date/Time Support	Derick Rethans
+DB-LIB (MS SQL, Sybase)	Wez Furlong, Frank M. Kromann, Adam Baratz
+DBA	Sascha Schumann, Marcus Boerger
+DOM	Christian Stocker, Rob Richards, Marcus Boerger
+enchant	Pierre-Alain Joye, Ilia Alshanetsky
+EXIF	Rasmus Lerdorf, Marcus Boerger
+fileinfo	Ilia Alshanetsky, Pierre Alain Joye, Scott MacVicar, Derick Rethans, Anatol Belski
+Firebird driver for PDO	Ard Biesheuvel
+FTP	Stefan Esser, Andrew Skalski
+GD imaging	Rasmus Lerdorf, Stig Bakken, Jim Winstead, Jouni Ahto, Ilia Alshanetsky, Pierre-Alain Joye, Marcus Boerger
+GetText	Alex Plotnick
+GNU GMP support	Stanislav Malyshev
+Iconv	Rui Hirokawa, Stig Bakken, Moriyoshi Koizumi
+IMAP	Rex Logan, Mark Musone, Brian Wang, Kaj-Michael Lang, Antoni Pamies Olive, Rasmus Lerdorf, Andrew Skalski, Chuck Hagenbuch, Daniel R Kalowsky
+Input Filter	Rasmus Lerdorf, Derick Rethans, Pierre-Alain Joye, Ilia Alshanetsky
+InterBase	Jouni Ahto, Andrew Avdeev, Ard Biesheuvel
+Internationalization	Ed Batutis, Vladimir Iordanov, Dmitry Lakhtyuk, Stanislav Malyshev, Vadim Savchuk, Kirti Velankar
+JSON	Jakub Zelenka, Omar Kilani, Scott MacVicar
+LDAP	Amitay Isaacs, Eric Warnke, Rasmus Lerdorf, Gerrit Thomson, Stig Venaas
+LIBXML	Christian Stocker, Rob Richards, Marcus Boerger, Wez Furlong, Shane Caraveo
+Multibyte String Functions	Tsukada Takuya, Rui Hirokawa
+MySQL driver for PDO	George Schlossnagle, Wez Furlong, Ilia Alshanetsky, Johannes Schlueter
+MySQLi	Zak Greant, Georg Richter, Andrey Hristov, Ulf Wendel
+MySQLnd	Andrey Hristov, Ulf Wendel, Georg Richter, Johannes Schlüter
+OCI8	Stig Bakken, Thies C. Arntzen, Andy Sautins, David Benson, Maxim Maletsky, Harald Radi, Antony Dovgal, Andi Gutmans, Wez Furlong, Christopher Jones, Oracle Corporation
+ODBC driver for PDO	Wez Furlong
+ODBC	Stig Bakken, Andreas Karajannis, Frank M. Kromann, Daniel R. Kalowsky
+Opcache	Andi Gutmans, Zeev Suraski, Stanislav Malyshev, Dmitry Stogov, Xinchen Hui
+OpenSSL	Stig Venaas, Wez Furlong, Sascha Kettler, Scott MacVicar
+Oracle (OCI) driver for PDO	Wez Furlong
+pcntl	Jason Greene, Arnaud Le Blanc
+Perl Compatible Regexps	Andrei Zmievski
+PHP Archive	Gregory Beaver, Marcus Boerger
+PHP Data Objects	Wez Furlong, Marcus Boerger, Sterling Hughes, George Schlossnagle, Ilia Alshanetsky
+PHP hash	Sara Golemon, Rasmus Lerdorf, Stefan Esser, Michael Wallner, Scott MacVicar
+Posix	Kristian Koehntopp
+PostgreSQL driver for PDO	Edin Kadribasic, Ilia Alshanetsky
+PostgreSQL	Jouni Ahto, Zeev Suraski, Yasuo Ohgaki, Chris Kings-Lynne
+Pspell	Vlad Krupin
+Readline	Thies C. Arntzen
+Recode	Kristian Koehntopp
+Reflection	Marcus Boerger, Timm Friebe, George Schlossnagle, Andrei Zmievski, Johannes Schlueter
+Sessions	Sascha Schumann, Andrei Zmievski
+Shared Memory Operations	Slava Poliakov, Ilia Alshanetsky
+SimpleXML	Sterling Hughes, Marcus Boerger, Rob Richards
+SNMP	Rasmus Lerdorf, Harrie Hazewinkel, Mike Jackson, Steven Lawrance, Johann Hanne, Boris Lytochkin
+SOAP	Brad Lafountain, Shane Caraveo, Dmitry Stogov
+Sockets	Chris Vandomelen, Sterling Hughes, Daniel Beulshausen, Jason Greene
+Sodium	Frank Denis
+SPL	Marcus Boerger, Etienne Kneuss
+SQLite 3.x driver for PDO	Wez Furlong
+SQLite3	Scott MacVicar, Ilia Alshanetsky, Brad Dewar
+System V Message based IPC	Wez Furlong
+System V Semaphores	Tom May
+System V Shared Memory	Christian Cartus
+tidy	John Coggeshall, Ilia Alshanetsky
+tokenizer	Andrei Zmievski, Johannes Schlueter
+WDDX	Andrei Zmievski
+XML	Stig Bakken, Thies C. Arntzen, Sterling Hughes
+XMLReader	Rob Richards
+xmlrpc	Dan Libby
+XMLWriter	Rob Richards, Pierre-Alain Joye
+XSL	Christian Stocker, Rob Richards
+Zip	Pierre-Alain Joye, Remi Collet
+Zlib	Rasmus Lerdorf, Stefan Roehrich, Zeev Suraski, Jade Nicoletti, Michael Wallner
+PHP Documentation
+Authors	Mehdi Achour, Friedhelm Betz, Antony Dovgal, Nuno Lopes, Hannes Magnusson, Philip Olson, Georg Richter, Damien Seguy, Jakub Vrana, Adam Harvey
+Editor	Peter Cowburn
+User Note Maintainers	Daniel P. Brown, Thiago Henrique Pojda
+Other Contributors	Previously active authors, editors and other contributors are listed in the manual.
+PHP Quality Assurance Team
+Ilia Alshanetsky, Joerg Behrens, Antony Dovgal, Stefan Esser, Moriyoshi Koizumi, Magnus Maatta, Sebastian Nohn, Derick Rethans, Melvyn Sopacua, Jani Taskinen, Pierre-Alain Joye, Dmitry Stogov, Felipe Pena, David Soria Parra, Stanislav Malyshev, Julien Pauli, Stephen Zarkos, Anatol Belski, Remi Collet, Ferenc Kovacs
+Websites and Infrastructure team
+PHP Websites Team	Rasmus Lerdorf, Hannes Magnusson, Philip Olson, Lukas Kahwe Smith, Pierre-Alain Joye, Kalle Sommer Nielsen, Peter Cowburn, Adam Harvey, Ferenc Kovacs, Levi Morrison
+Event Maintainers	Damien Seguy, Daniel P. Brown
+Network Infrastructure	Daniel P. Brown
+Windows Infrastructure	Alex Schoenmaker
+PHP License
+
+This program is free software; you can redistribute it and/or modify it under the terms of the PHP License as published by the PHP Group and included in the distribution in the file: LICENSE
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+If you did not receive a copy of the PHP license, or have any questions about PHP licensing, please contact license@php.net.
+
+2

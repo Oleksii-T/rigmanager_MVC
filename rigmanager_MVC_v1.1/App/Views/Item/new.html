@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+
+{% block title %}Add item{% endblock %}
+
+{% block footer %}
+    <script src="/js/app.js"></script>
+{#
+    <script>
+        $(document).ready(function() {
+
+            /**
+             * Validate the form
+             */
+            $('#formNewItem').validate({
+                rules: {
+                    title: {
+                        required: true,
+                        minlength: 10,
+                        maxlength: 70
+                    },
+                    desc: {
+                        required: true,
+                        minlength: 10,
+                        maxlength: 255
+                    }
+                },
+                messages: {
+                    title: {
+                        required: 'Минимум 10 символов.',
+                        minlength: 'Минимум 10 символов.',
+                        maxlength: 'Максимум 70 символов'
+                    },
+                    desc: {
+                        required: 'Минимум 10 символов.',
+                        minlength: 'Минимум 10 символов.',
+                        maxlength: 'Максимум 255 символов'
+                    }
+                }
+            });
+        });
+    </script>
+#}
+{% endblock %}
+
+{% block body %}
+
+    <h1>Добавление обьявления</h1>
+
+    {% if item.errors is not empty %}
+        <p>Ошибки:</p>
+        <ul>
+            {% for error in item.errors %}
+                <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <form method="post" id="formNewItem" action="/items/create" enctype="multipart/form-data">
+
+        <div>
+            <label for="inputTitle">Заголовок</label>
+            <input id="inputTitle" name="title" placeholder="Заголовок" value="{{ item.title }}"/>
+        </div>
+        <div>
+            <lable for="inputTag">Рубрика</lable>
+            <select id="inputTag" name="tag" id="rag">
+                <option value="other">Другое</option>
+                <option value="pipes">Трубы</option>
+                <option value="elevator">Элеваторы</option>
+                <option value="bop">ПВО</option>
+                <option value="logging">ГИС</option>
+                <option value="bha">КНБК</option>
+                <option value="cement">Цементирование</option>
+                <option value="mud">Для раствора</option>
+                <option value="parts">Запчасти</option>
+            </select>
+        </div>
+        <div>
+            <label for="inputDecs">Описание</label>
+            <input id="inputDecs" name="desc" placeholder="Описание" value="{{ item.desc }}"/>
+        </div>
+        <div>
+            <label for="inputImg">Добавте фото</label>
+            <input type="file" id="inputImg" name="img[]" multiple="" />
+        </div>
+        <div>
+            <p>[pre-view Gallery TODO]</p>
+        </div>
+        <button type="submit">Сохранить</button>
+        <a href="/">Отмена</a>
+
+        <div>
+            <h3>
+                Контактные данныe:
+            </h3>
+            <dl>
+                <dt>Имя</dt>
+                <dd>{{ user.name }}</dd>
+                <dt>Почта</dt>
+                <dd>{{ user.email }}</dd>
+                <dt>Телефон</dt>
+                <dd>{{ user.phone }}</dd>
+            </dl>
+        </div>
+
+    </form>
+    
+
+{% endblock %}

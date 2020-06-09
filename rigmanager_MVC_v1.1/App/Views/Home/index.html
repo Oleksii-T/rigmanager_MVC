@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+
+    <h1>Welcome</h1>
+
+    {% if current_user %}
+        Hello {{ current_user.name }}.
+        <a href="/items/new">Добавить обьявление</a>
+    {% else %}
+        <a href="/signup/new">Sign up</a> or <a href="/login">log in</a>.
+    {% endif %}
+
+    <h3>Просмотр бьявлений</h3>
+
+    {% for item in items_list %}
+    <ul>
+        <li>Заголовок: {{ item.title }}</li>
+        <li>Рубрика: {{ item.tag }}</li>
+        <li>Описание: {{ item.description }}</li>
+        <li><a href="/items/show?id={{ item.item_id }}">Детали</a></li>
+    </ul>
+    {% endfor %}
+
+{% endblock %}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="/">Домой</a></li>
+            {% if current_user %}
+                <li><a href="/profile/show">Профиль</a></li>
+                <li><a href="/logout">Выйти</a></li>                                
+            {% endif %}
+        </ul>
+    </nav>
+
+    {% for message in flash_messages %}
+        <div class="alert alert-{{ message.type }}">
+            {{ message.body }}
+        </div>
+    {% endfor %}
+
+    {% block body %}
+    {% endblock %}
+
+    
+    {% block footer %}
+    <div class="footer"> <!-- footer -->
+        <div>
+            <p>&copy; 2020 RigManager.com. All Rights Reserved</p>
+        </div>
+        <div id="iconsReferense">
+            Icons made by <a href="https://www.flaticon.com/authors/roundicons" title="Roundicons">Roundicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+        </div>
+    </div>
+    {% endblock %}
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
+</body>
+</html>

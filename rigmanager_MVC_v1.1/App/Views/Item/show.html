@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Items{% endblock %}
+
+{% block footer %}
+    <script src="/js/app.js"></script>
+
+{% endblock %}
+
+{% block body %}
+
+    <h1>Обьявление от {{ contact_info.name }}</h1>
+
+    {% if current_user_id == item.user_id %}
+        <p>Это ваше обьявление. <a href="/items/update">Править.</a></p>
+    {% endif %}
+
+    <ul>
+        <li>Заголовок: {{ item.title }}</li>
+        <li>Рубрика: {{ item.tag }}</li>
+        <li>Описание: {{ item.description }}</li>
+    </ul>
+    <h4>Контактная информация:</h4>
+    <ul>
+        <li>Почта: {{ contact_info.email }}</li>
+        {% if contact_info.phone %}
+            <li>Телефон: {{ contact_info.phone }}</li>
+        {% endif %}
+    </ul>
+
+{% endblock %}
